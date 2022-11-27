@@ -46,5 +46,15 @@
         </div>
       </div>
     </div>
+    <script>
+      let span = document.createElement('span');
+      span.setAttribute('class', 'price');
+      span.textContent = '3155';
+
+      let div = document.querySelector('div.product');
+      div.appendChild(span);
+      div.setAttribute('data-price', `${span.textContent}`);
+      
+    </script>
   </body>
 </html>
