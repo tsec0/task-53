@@ -49,12 +49,13 @@
     <script>
       let span = document.createElement('span');
       span.setAttribute('class', 'price');
-      span.textContent = '3155';
 
-      let div = document.querySelector('div.product');
-      div.appendChild(span);
-      div.setAttribute('data-price', `${span.textContent}`);
-      
+      let div = document.querySelectorAll('div.product');
+      Array.from(div).forEach(element => {
+        element.appendChild(span);
+        element.setAttribute('data-price', `${span.value}`);
+      });
+
     </script>
   </body>
 </html>
