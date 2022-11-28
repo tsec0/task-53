@@ -47,6 +47,7 @@
       </div>
     </div>
     <script>
+<<<<<<< HEAD
       let span = document.createElement('span');
       span.setAttribute('class', 'price');
 
@@ -54,6 +55,13 @@
       Array.from(div).forEach(element => {
         element.setAttribute('data-price', `${span.value}`);
         element.appendChild(span);
+=======
+      let div = document.querySelectorAll('.product');
+      let span = document.querySelector('p.price');
+      
+      Array.from(div).forEach(element => {
+        element.setAttribute('data-price', `${span.textContent}`);
+>>>>>>> dev
       });
 
     </script>
